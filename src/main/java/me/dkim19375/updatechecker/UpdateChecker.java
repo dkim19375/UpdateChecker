@@ -41,7 +41,6 @@ public class UpdateChecker implements CommandExecutor {
                 sender.sendMessage(var[5]);
                 sender.sendMessage(var[6]);
                 sender.sendMessage(var[7]);
-                sender.sendMessage(var[8]);
             }
         }
         return false;
