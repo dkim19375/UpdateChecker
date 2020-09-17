@@ -17,15 +17,18 @@ public class Main extends JavaPlugin {
 
     public String[] updateChecker(String pluginID, String[] ReturnValue, boolean Debug) {
         if (Debug) {
-            ReturnValue[5] = ChatColor.GOLD + "WARNING: MORE INFO IN CONSOLE!";
+            ReturnValue[5] = ChatColor.GOLD + "[UpdateChecker] [5] WARNING: MORE INFO IN CONSOLE!";
             new PluginUpdateChecker(this, Integer.parseInt(pluginID)).getLatestVersionDebug(version -> {
-                ReturnValue[8] = version;
-                ReturnValue[6] = "me.dkim19375.updatechecker.UpdateChecker.Main String Var version: " + version;
+                ReturnValue[6] = "[UpdateChecker] [6] (version): " + version;
             });
         }
         new PluginUpdateChecker(this, Integer.parseInt(pluginID)).getLatestVersion(version -> {
-            ReturnValue[8] = version;
+            ReturnValue[6] = "[UpdateChecker] [6] (version): " + version;
         });
         return ReturnValue;
     }
+    public void printToConsole(String msg) {
+        this.getServer().getConsoleSender().sendMessage("[UpdateChecker] " + msg);
+    }
+
 }

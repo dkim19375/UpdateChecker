@@ -53,7 +53,7 @@ public class UpdateChecker implements CommandExecutor {
         for(String key : data.getKeys(false)) {
             name = data.getString(key + ".name");
             pluginID = data.getString(key + ".pluginID");
-            ReturnValue[1] = "me.dkim19375.updatechecker.UpdateChecker String Var name: " + name + ", pluginID: " + pluginID;
+            ReturnValue[1] = "[UpdateChecker] [1] (name)" + name + ", pluginID: " + pluginID;
             getPluginVersion(pluginID, name, ReturnValue, Debug);
         }
         return ReturnValue;
@@ -63,9 +63,9 @@ public class UpdateChecker implements CommandExecutor {
         String result;
         result = Bukkit.getPluginManager().getPlugin(name).getDescription().getVersion();
         if (Debug) {
-            ReturnValue[2] = "me.dkim19375.updatechecker.UpdateChecker String Var result = " + result;
-            ReturnValue[3] = "me.dkim19375.updatechecker.UpdateChecker String Var pluginID = " + pluginID;
-            ReturnValue[4] = "me.dkim19375.updatechecker.UpdateChecker String Var name = " + name;
+            ReturnValue[2] = "[UpdateChecker] [2] (result):" + result;
+            ReturnValue[3] = "[UpdateChecker] [3] (pluginID): " + pluginID;
+            ReturnValue[4] = "[UpdateChecker] [4] (name): " + name;
         }
         if (main.updateChecker(pluginID, ReturnValue, Debug).equals(result)) {
             ReturnValue[7] = "Plugin " + name + " is up to date! (version " + main.updateChecker(pluginID, ReturnValue, Debug) + ")";
@@ -74,4 +74,5 @@ public class UpdateChecker implements CommandExecutor {
         }
         return ReturnValue;
     }
+
 }
