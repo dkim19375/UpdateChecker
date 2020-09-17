@@ -1,0 +1,5 @@
+#example:
+#  name: "DoubleJumpPlugin"
+#  pluginID: 12345 (Find the id at the end of the url - www.spigotmc.org/resources/plugin.12345)
+#  IMPORTANT NOTE: THE PLUGIN MUST BE A SPIGOT PLUGIN FOR IT TO WORK!!!
+#  example: "true" #DO NOT ADD THIS!!!!!

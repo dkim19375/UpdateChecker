@@ -1,0 +1,11 @@
+main: me.dkim19375.updatechecker.Main
+name: UpdateChecker
+version: @version@
+description: Update Checker!
+author: dkim19375
+api-version: 1.13
+softdepend: [PlaceholderAPI]
+commands:
+  updatechecker:
+    description: Main Command
+    usage: /updatechecker
